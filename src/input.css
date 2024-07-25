@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ /* custom warna */
+ .bg-custom-cream {
+    background-color: #F0EBE3;
+}
+.text-custom-dark {
+    color: #2c3e50;
+}
+.hover\:text-custom-light:hover {
+    color: #282b2d;
+}
+.bg-custom-light {
+    background-color: #313738;
+}
+
+/* navbar mobile */
+.mobile-nav-link {
+position: relative;
+transition: color 0.3s ease;
+}
+.mobile-nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: 0;
+left: 0;
+background-color: #3b82f6; /* sesuaikan warna jika perlu */
+transition: width 0.3s ease;
+}
+
+.mobile-nav-link:hover::after {
+width: 50%;
+}
+
+/* slide gambar */
+#image-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: opacity 0.5s ease-in-out;
+}
+.carousel-image.hidden { opacity: 0; }
+
+html {
+scroll-behavior: smooth;
+}
+
+#Skill {
+scroll-margin-top: 50px; /* Sesuaikan nilai ini dengan tinggi navbar Anda */
+}

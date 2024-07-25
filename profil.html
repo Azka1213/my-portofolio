@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firdaus Zakaria - Portofolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/@heroicons/v2@1.0.0/24/outline/esm/index.js"></script>
+    <link href="./src/output.css" rel="stylesheet">
+    <script src="./src/script.js" defer></script>
+
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Header -->
+    <header class="bg-custom-cream text-custom-dark fixed top-0 left-0 right-0 w-full z-50 shadow-lg" x-data="{ isOpen: false }">
+        <nav class="container mx-auto px-6 md:px-24 py-3 md:py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <svg class="w-6 h-6 text-custom-dark dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.99 9H15M8.99 9H9m12 3a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM7 13c0 1 .507 2.397 1.494 3.216a5.5 5.5 0 0 0 7.022 0C16.503 15.397 17 14 17 13c0 0-1.99 1-4.995 1S7 13 7 13Z"/>
+                      </svg>                      
+                    <span class="text-xl md:text-2xl ml-1 font-bold">Firdaus Zakaria</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#Beranda" class="flex items-center hover:text-blue-500 transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                        </svg>
+                        Beranda
+                    </a>
+                    <a href="#Tentang Saya" class="flex items-center  hover:text-blue-500  transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                        </svg>
+                        Tentang Saya
+                    </a>
+                    <a href="#Skill" class="flex items-center hover:text-blue-500 transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
+                        </svg>
+                        Skill
+                    </a>
+                    <a href="#Projek" class="flex items-center  hover:text-blue-500  transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
+                        </svg>
+                        Projek
+                    </a>
+                    <a href="#Kontak" class="flex items-center  hover:text-blue-500  transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                        </svg>
+                        Kontak
+                    </a>
+                </div>
+                <button @click="isOpen = !isOpen" class="md:hidden focus:outline-none">
+                    <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div 
+        x-show="isOpen"
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 transform -translate-y-2"
+        x-transition:enter-end="opacity-100 transform translate-y-0"
+        x-transition:leave="transition ease-in duration-200"
+        x-transition:leave-start="opacity-100 transform translate-y-0"
+        x-transition:leave-end="opacity-0 transform -translate-y-2"
+        class="md:hidden bg-custom-cream shadow-lg"
+    >
+        <a href="#Beranda" @click="isOpen = false" class="block py-2 px-4 text-sm mobile-nav-link">Beranda</a>
+        <a href="#Tentang Saya" @click="isOpen = false" class="block py-2 px-4 text-sm mobile-nav-link">Tentang Saya</a>
+        <a href="#Skill" @click="isOpen = false" class="block py-2 px-4 text-sm mobile-nav-link">Skill</a>
+        <a href="#Projek" @click="isOpen = false" class="block py-2 px-4 text-sm mobile-nav-link">Projek</a>
+        <a href="#Kontak" @click="isOpen = false" class="block py-2 px-4 text-sm mobile-nav-link">Kontak</a>
+    </div>
+</header>
+<!-- Header -->
+
+     <!-- Hero Section -->
+    <main class="">
+       <section id="Beranda" class="bg-custom-cream text-gray-800 flex items-center relative overflow-hidden">
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="flex flex-col mt-20 md:mt-24 md:flex-row items-center justify-between">
+            <div class="md:w-1/2 text-left md:ml-20 md:pr-12">
+                <h1 class="text-xl md:text-2xl font-medium leading-tight md:mb-2 mb-1">
+                    Halo Semua, Saya
+                </h1>
+                <h2 class="text-4xl md:text-6xl md:-ml-1 -ml-0.5 font-bold leading-tight text-custom-dark md:mb-4 mb-1">Firdaus Zakaria</h2>
+                <p class="text-xl md:text-2xl mb-6 text-gray-700 md:mb-28">Programmer & <span class="text-gray-500 font-bold">Pro Gamer</span></p>
+                <p class="text-lg md:text-xl md:mr-6 mb-8 md:mb-10 text-gray-600">Berfokus pada menghadirkan pengalaman pengguna yang optimal melalui algoritma yang efisien dan desain yang menarik</p>
+                <div class="flex flex-col sm:flex-row space-y-4 md:mb-8 sm:space-y-0 sm:space-x-4">
+                    <a href="https://wa.me/YourPhoneNumber" target="_blank" rel="noopener noreferrer" class="bg-gray-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition duration-300 inline-block text-center">Hubungi Saya</a>                 
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-6 flex justify-center items-center">
+                <div class="relative w-full md:w-10/12 lg:w-5/5">
+                    <img src="images/profil.png" alt="Profile" class="w-full">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="Tentang Saya" class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-6">
+        <!-- Judul untuk tampilan mobile -->
+        <h2 class="text-4xl font-bold mb-2 text-gray-800 lg:hidden">Tentang Saya</h2>
+        <div class="w-24 h-1 bg-blue-500 mb-6 lg:hidden"></div>
+        
+        <div class="flex flex-col lg:flex-row items-start">
+            <!-- Kontainer gambar -->
+            <div class="w-full lg:w-3/4 mb-8 lg:mb-0 lg:pr-8">
+                <div class="relative group">
+                    <div id="image-carousel" class="overflow-hidden rounded-lg shadow-2xl transform transition duration-500 group-hover:scale-105">
+                        <div id="image-carousel" class="relative w-full h-0 pb-[70%] overflow-hidden rounded-lg shadow-2xl">
+                            <img src="sertifikat/cert1.jpg" alt="TENTANG SAYA" class="carousel-image absolute top-0 left-0 w-full h-full object-contain opacity-100 transition-opacity duration-500">
+                            <img src="sertifikat/cert2.jpg" alt="TENTANG SAYA" class="carousel-image absolute top-0 left-0 w-full h-full object-contain opacity-0 transition-opacity duration-500">
+                            <img src="sertifikat/cert3.jpg" alt="TENTANG SAYA" class="carousel-image absolute top-0 left-0 w-full h-full object-contain opacity-0 transition-opacity duration-500">
+                            <img src="sertifikat/cert4.jpg" alt="TENTANG SAYA" class="carousel-image absolute top-0 left-0 w-full h-full object-contain opacity-0 transition-opacity duration-500">
+                            <img src="sertifikat/cert5.jpg" alt="TENTANG SAYA" class="carousel-image absolute top-0 left-0 w-full h-full object-contain opacity-0 transition-opacity duration-500">
+                            <img src="sertifikat/cert6.jpg" alt="TENTANG SAYA" class="carousel-image absolute top-0 left-0 w-full h-full object-contain opacity-0 transition-opacity duration-500">
+                            <img src="sertifikat/cert7.jpg" alt="TENTANG SAYA" class="carousel-image absolute top-0 left-0 w-full h-full object-contain opacity-0 transition-opacity duration-500">
+                            <img src="sertifikat/cert8.jpg" alt="TENTANG SAYA" class="carousel-image absolute top-0 left-0 w-full h-full object-contain opacity-0 transition-opacity duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Konten teks -->
+            <div class="w-full lg:w-1/2">
+                <!-- Judul untuk tampilan desktop -->
+                <h2 class="text-3xl md:text-5xl font-bold mb-2 -mt-2 text-gray-800 hidden lg:block">Tentang Saya</h2>
+                <div class="w-24 h-1 bg-blue-500 mb-6 hidden lg:block"></div>
+                
+                <p class="text-gray-700 leading-relaxed mb-3 text-lg">
+                    Halo! Saya Firdaus Zakaria, seorang fresh graduate dari jurusan [Nama Jurusan] di [Nama Universitas]. Saya memiliki passion dalam pengembangan web dan bersemangat untuk memulai karir profesional saya di dunia industri.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-5 text-lg">
+                    Selama masa studi, saya telah mengembangkan keterampilan dalam HTML, CSS, JavaScript, dan beberapa framework modern seperti React dan Node.js. Saya juga memiliki pengalaman dalam pengembangan database menggunakan MySQL.            
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6 text-lg">            
+                    Saya selalu antusias untuk belajar teknologi baru dan berkolaborasi dalam tim untuk menciptakan solusi web yang inovatif dan efisien.            
+                <div>
+                    <h4 class="text-xl font-semibold mb-4 text-gray-800">Pendidikan:</h4>
+                    <p class="text-gray-700 mb-2">• Sarjana [Nama Jurusan], [Nama Universitas] (Tahun lulus)</p>
+                </div>
+                <div class="mt-7">
+                    <h4 class="text-2xl font-semibold mb-3 text-gray-800">Mari terhubung:</h4>
+                    <div class="flex space-x-5">
+                        <a href="https://www.instagram.com/firdauszakariaa?igsh=MTRhdTM1eWIxbDFiYg==" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-blue-600 transition duration-300"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="https://id.linkedin.com/in/firdaus-zakaria-07a690255" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-blue-600 transition duration-300"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="https://github.com/Azka1213" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-blue-600 transition duration-300"><i class="fab fa-github fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skill Section -->
+<section id="Skill" class="py-6 md:py-12 bg-white">
+    <div class="container mb-7 mx-auto px-4 sm:px-6 lg:px-8 md:max-w-8xl">
+        <div class="md:text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-1 -mt-0 text-gray-800 inline-block relative">
+                Skill
+                <div class="hidden md:block w-12 h-1 ml-0.5 bg-blue-500 absolute -bottom-2 left-0"></div>
+            </h2>
+        </div>
+        <div class="w-12 h-1 bg-blue-500 -mb-5 md:hidden ml-0.5"></div>        
+        <div class="mt-12 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8 md:max-w-8xl mx-auto"> 
+
+            <!-- C++ Skill Card -->
+            <a href="https://isocpp.org/" target="_blank" rel="noopener noreferrer" class="block bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group py-2 px-2 sm:px-3 md:p-4 min-h-[80px] sm:min-h-[90px] md:min-h-[140px] w-full">
+                <div class="flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-1 md:mb-2">
+                            <i class="fas fa-code text-xl sm:text-2xl md:text-3xl text-blue-600 group-hover:animate-bounce"></i>
+                            <h3 class="text-sm sm:text-base md:text-xl font-bold text-gray-800">C++</h3>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5 md:h-2 mb-1 md:mb-2 relative overflow-hidden">
+                            <div class="bg-blue-600 h-1 sm:h-1.5 md:h-2 rounded-full w-4/5 transition-all duration-500 ease-out group-hover:w-full"></div>
+                        </div>
+                    </div>
+                    <p class="text-xs md:text-sm text-gray-600 hidden sm:block">Pemrograman objek tingkat lanjut dan implementasi algoritma</p>
+                </div>
+            </a>
+
+            <!-- HTML Skill Card -->
+            <a href="https://html.com/" target="_blank" rel="noopener noreferrer" class="block bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group py-2 px-2 sm:px-3 md:p-4 min-h-[80px] sm:min-h-[90px] md:min-h-[140px] w-full">
+                <div class="flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-1 md:mb-2">
+                            <i class="fab fa-html5 text-xl sm:text-2xl md:text-3xl text-orange-500 group-hover:animate-pulse"></i>
+                            <h3 class="text-sm sm:text-base md:text-xl font-bold text-gray-800">HTML</h3>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5 md:h-2 mb-1 md:mb-2 relative overflow-hidden">
+                            <div class="bg-orange-500 h-1 sm:h-1.5 md:h-2 rounded-full w-11/12 transition-all duration-500 ease-out group-hover:w-full"></div>
+                        </div>
+                    </div>
+                    <p class="text-xs md:text-sm text-gray-600 hidden sm:block">Markup semantik dan struktur web yang mudah diakses</p>
+                </div>
+            </a>
+
+            <!-- CSS Skill Card -->
+            <a href="http://css.com/" target="_blank" rel="noopener noreferrer" class="block bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group py-2 px-2 sm:px-3 md:p-4 min-h-[80px] sm:min-h-[90px] md:min-h-[140px] w-full">
+                <div class="flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-1 md:mb-2">
+                            <i class="fab fa-css3-alt text-xl sm:text-2xl md:text-3xl text-blue-400 group-hover:animate-spin"></i>
+                            <h3 class="text-sm sm:text-base md:text-xl font-bold text-gray-800">CSS</h3>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5 md:h-2 mb-1 md:mb-2 relative overflow-hidden">
+                            <div class="bg-blue-400 h-1 sm:h-1.5 md:h-2 rounded-full w-10/12 transition-all duration-500 ease-out group-hover:w-full"></div>
+                        </div>
+                    </div>
+                    <p class="text-xs md:text-sm text-gray-600 hidden sm:block">Desain responsif dan teknik tata letak modern</p>
+                </div>
+            </a>
+
+            <!-- JavaScript Skill Card -->
+            <a href="https://www.javascript.com/" target="_blank" rel="noopener noreferrer" class="block bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group py-2 px-2 sm:px-3 md:p-4 min-h-[80px] sm:min-h-[90px] md:min-h-[140px] w-full">
+                <div class="flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-1 md:mb-2">
+                            <i class="fab fa-js text-xl sm:text-2xl md:text-3xl text-yellow-400 group-hover:animate-ping"></i>
+                            <h3 class="text-sm sm:text-base md:text-xl font-bold text-gray-800">JavaScript</h3>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5 md:h-2 mb-1 md:mb-2 relative overflow-hidden">
+                            <div class="bg-yellow-400 h-1 sm:h-1.5 md:h-2 rounded-full w-3/4 transition-all duration-500 ease-out group-hover:w-full"></div>
+                        </div>
+                    </div>
+                    <p class="text-xs md:text-sm text-gray-600 hidden sm:block">Interaktivitas web dinamis dan manipulasi DOM</p>
+                </div>
+            </a>
+
+            <!-- MySQL Skill Card -->
+            <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer" class="block bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group py-2 px-2 sm:px-3 md:p-4 min-h-[80px] sm:min-h-[90px] md:min-h-[140px] w-full">
+                <div class="flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-1 md:mb-2">
+                            <i class="fas fa-database text-xl sm:text-2xl md:text-3xl text-blue-800 group-hover:animate-bounce"></i>
+                            <h3 class="text-sm sm:text-base md:text-xl font-bold text-gray-800">MySQL</h3>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5 md:h-2 mb-1 md:mb-2 relative overflow-hidden">
+                            <div class="bg-blue-800 h-1 sm:h-1.5 md:h-2 rounded-full w-8/12 transition-all duration-500 ease-out group-hover:w-full"></div>
+                        </div>
+                    </div>
+                    <p class="text-xs md:text-sm text-gray-600 hidden sm:block">Desain database dan optimasi query kompleks</p>
+                </div>
+            </a>
+
+            <!-- Node.js Skill Card -->
+            <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" class="block bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group py-2 px-2 sm:px-3 md:p-4 min-h-[80px] sm:min-h-[90px] md:min-h-[140px] w-full">
+                <div class="flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-1 md:mb-2">
+                            <i class="fab fa-node-js text-xl sm:text-2xl md:text-3xl text-green-600 group-hover:animate-pulse"></i>
+                            <h3 class="text-sm sm:text-base md:text-xl font-bold text-gray-800">Node.js</h3>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5 md:h-2 mb-1 md:mb-2 relative overflow-hidden">
+                            <div class="bg-green-600 h-1 sm:h-1.5 md:h-2 rounded-full w-7/12 transition-all duration-500 ease-out group-hover:w-full"></div>
+                        </div>
+                    </div>
+                    <p class="text-xs md:text-sm text-gray-600 hidden sm:block">JavaScript sisi server dan pengembangan API RESTful</p>
+                </div>
+            </a>
+
+            <!-- React Skill Card -->
+            <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer" class="block bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group py-2 px-2 sm:px-3 md:p-4 min-h-[80px] sm:min-h-[90px] md:min-h-[140px] w-full">
+                <div class="flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-1 md:mb-2">
+                            <i class="fab fa-react text-xl sm:text-2xl md:text-3xl text-blue-500 group-hover:animate-spin"></i>
+                            <h3 class="text-sm sm:text-base md:text-xl font-bold text-gray-800">React</h3>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5 md:h-2 mb-1 md:mb-2 relative overflow-hidden">
+                            <div class="bg-blue-500 h-1 sm:h-1.5 md:h-2 rounded-full w-9/12 transition-all duration-500 ease-out group-hover:w-full"></div>
+                        </div>
+                    </div>
+                    <p class="text-xs md:text-sm text-gray-600 hidden sm:block">Pengembangan UI komponen dan state management</p>
+                </div>
+            </a>
+
+            <!-- Python Skill Card -->
+            <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" class="block bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group py-2 px-2 sm:px-3 md:p-4 min-h-[80px] sm:min-h-[90px] md:min-h-[140px] w-full">
+                <div class="flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-1 md:mb-2">
+                            <i class="fab fa-python text-xl sm:text-2xl md:text-3xl text-yellow-600 group-hover:animate-bounce"></i>
+                            <h3 class="text-sm sm:text-base md:text-xl font-bold text-gray-800">Python</h3>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5 md:h-2 mb-1 md:mb-2 relative overflow-hidden">
+                            <div class="bg-yellow-600 h-1 sm:h-1.5 md:h-2 rounded-full w-8/12 transition-all duration-500 ease-out group-hover:w-full"></div>
+                        </div>
+                    </div>
+                    <p class="text-xs md:text-sm text-gray-600 hidden sm:block">Scripting, analisis data, dan machine learning</p>
+                </div>
+            </a>
+
+        <!-- Git Skill Card -->
+      <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer"class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 group py-2 px-2 sm:px-3 md:p-4 min-h-[80px] sm:min-h-[90px] md:min-h-[140px] w-full col-span-2 md:col-span-1">
+    <div class="flex flex-col h-full justify-between">
+        <div>
+            <div class="flex items-center justify-between mb-1 md:mb-2">
+                <i class="fab fa-git-alt text-xl sm:text-2xl md:text-3xl text-red-500 group-hover:animate-pulse"></i>
+                <h3 class="text-sm sm:text-base md:text-xl font-bold text-gray-800">Git</h3>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-1 sm:h-1.5 md:h-2 mb-1 md:mb-2 relative overflow-hidden">
+                <div class="bg-red-500 h-1 sm:h-1.5 md:h-2 rounded-full w-10/12 transition-all duration-500 ease-out group-hover:w-full"></div>
+            </div>
+          </div>
+        <p class="text-xs md:text-sm text-gray-600 hidden sm:block">Kontrol versi dan kolaborasi tim</p>
+              </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+      <!-- Projects Section -->
+      <section id="Projek" class="py-16 md:py-24 bg-white">
+        <div class="container text-left md:mx-auto px-5 md:px-8">
+            <!-- Judul untuk tampilan mobile -->
+            <h2 class="text-4xl sm:text-5xl font-bold mb-2 md:hidden text-gray-800">Projek Saya</h2>
+            <div class="w-24 h-1 -mt-1 ml-0.5 bg-blue-500 -mb-3 md:hidden"></div>
+            
+            <!-- Judul untuk tampilan desktop -->
+            <div class="hidden md:block md:text-center">
+                <h2 class="text-4xl sm:text-5xl font-bold mb-1 text-gray-800 inline-block relative">
+                    Projek Saya
+                    <div class="w-32 h-1 bg-blue-500 absolute -mb-1 -bottom-2 left-0 md:ml-1"></div>
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+        
+            <!-- Project Card 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-2">
+                <img src="images/cover_ninjavillager.png" alt="Ninja Villager Games" class="w-full h-64 md:h-64 object-fill">
+                <div class="p-6">
+                    <h3 class="font-bold text-2xl mb-2 text-gray-800">Ninja Villager Games</h3>
+                    <p class="text-gray-600 mb-4">Sebuah permainan di mana kita menggunakan karakter Ninja untuk melindungi desa dari serangan zombie.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">C++</span>
+                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">SigilLib</span>
+                    </div>
+                    <a href="https://firdauszakaria.itch.io/ninja-villager" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Lihat Projek</a>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-2">
+                <img src="images/photography-water-reflection-bali-wallpaper-preview.jpg" alt="BaliYuks" class="w-full h-64 md:h-64 object-cover object-center">
+                <div class="p-6">
+                    <h3 class="font-bold text-2xl mb-2 text-gray-800">BaliYuks</h3>
+                    <p class="text-gray-600 mb-4">Website yang berisi informasi seputar Provinsi Bali </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">HTML</span>
+                        <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded">CSS</span>
+                    </div>
+                    <a href="https://baliyuks.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">View Project</a>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-2">
+                <img src="images/6s.png" alt="6Second" class="w-full h-64 md:h-64 object-fill">
+                <div class="p-6">
+                    <h3 class="font-bold text-2xl mb-2 text-gray-800">6Second</h3>
+                    <p class="text-gray-600 mb-4">Platform jual-beli barang bekas secara online dengan memfasilitasi pertemuan virtual antara kedua belah pihak dengan menggunakan fitur WhatsApp</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-orange-100 text-orange-800 text-xs font-semibold px-2.5 py-0.5 rounded">HTML5</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Tailwind</span>
+                        <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">JavaScript</span>
+                    </div>
+                    <a href="https://6second.my.id/" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="Kontak" class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-6">
+        <!-- Mobile view (unchanged) -->
+        <div class="md:hidden">
+            <h2 class="text-4xl font-bold mb-1 text-gray-800">Kontak Saya</h2>
+            <div class="w-24 h-1 bg-blue-500 ml-0.5 mb-6"></div>
+        </div>
+        
+        <!-- Desktop view (centered title with line) -->
+        <div class="hidden md:block text-center mb-10">
+            <h2 class="text-5xl font-bold mb-2 text-gray-800 inline-block relative">
+                Kontak Saya
+                <div class="w-1/2 h-1 ml-0.5 bg-blue-500 absolute left-0 -bottom-2"></div>
+            </h2>
+        </div>
+
+        <div class="max-w-5xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden md:flex">
+            <div class="md:w-1/2 bg-gray-100 p-8">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Informasi Kontak</h3>
+                <p class="text-gray-500 mb-4">Jangan ragu untuk menghubungi saya melalui:</p>
+                <ul class="space-y-3">
+                    <li class="flex items-center text-gray-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        firdauszakaria201@gmail.com
+                    </li>
+                    <li class="flex items-center text-gray-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        +62 815-2779-7830
+                    </li>
+                    <li class="flex items-center text-gray-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        Yogyakarta, Indonesia
+                    </li>
+                </ul>
+            </div>
+            <div class="md:w-1/2 p-8">
+                <form action="https://formspree.io/f/mvgpzyoq" method="POST">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-semibold mb-2">Nama</label>
+                        <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700 font-semibold mb-2">Pesan</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" required></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600 transition duration-300 w-full font-semibold">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="bg-custom-cream text-custom-dark py-10">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-wrap justify-between">
+            <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                <h3 class="text-2xl font-bold md:ml-8 mb-4">Firdaus Zakaria</h3>
+                <p class="md:ml-8 md:mx-64 text-gray-700">Pengembang web yang bersemangat dan inovatif, siap membawa ide-ide Anda menjadi kenyataan digital.</p>
+            </div>
+            <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                <h4 class="text-xl font-semibold md:ml-48 mb-4">Kategori Tulisan</h4>
+                <ul class=" md:ml-48 space-y-2">
+                    <li>Programming</li>
+                    <li>Game</li>
+                    <li>Teknologi</li>
+                </ul>
+            </div>
+            <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                <h4 class="text-xl  md:ml-80 font-semibold mb-4">Tautan Cepat</h4>
+                <ul class="md:ml-80 space-y-2">
+                    <li><a href="#Beranda" class="hover:text-blue-400 transition duration-300">Beranda</a></li>
+                    <li><a href="#Tentang Saya" class="hover:text-blue-400 transition duration-300">Tentang Saya</a></li>
+                    <li><a href="#Skill" class="hover:text-blue-400 transition duration-300">Skill</a></li>
+                    <li><a href="#Projek" class="hover:text-blue-400 transition duration-300">Projek</a></li>
+                    <li><a href="#Kontak" class="hover:text-blue-400 transition duration-300">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-10 text-center">
+                <div class="items-center mb-6 space-x-4">
+                    <a href="https://id.linkedin.com/in/firdaus-zakaria-07a690255" target="_blank" rel="noopener noreferrer" class="text-custom-dark hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/Azka1213" target="_blank" rel="noopener noreferrer" class="text-custom-dark hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@firdauszakaria3014" target="_blank" rel="noopener noreferrer" class="text-custom-dark hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-youtube fa-2x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/firdauszakariaa?igsh=MTRhdTM1eWIxbDFiYg==" target="_blank" rel="noopener noreferrer" class="text-custom-dark hover:text-blue-400 transition duration-300">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                </div>
+                <p>&copy; 2024 Firdaus Zakaria. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
